@@ -5,13 +5,10 @@ import * as sass from "sass";
 const gulpSassCompiler = gulpSass(sass);
 
 function buildStyles() {
-  return src("./src/styles/*.scss")
+  return src("./src/styles/**/*.scss")
     .pipe(
       gulpSassCompiler().on("error", function (err) {
         console.error("Sass Error:", err.message);
-        console.error("File:", err.file);
-        console.error("Line:", err.line);
-        console.error("Column:", err.column);
         this.emit("end");
       })
     )
@@ -19,7 +16,7 @@ function buildStyles() {
 }
 
 function watchTask() {
-  watch(["src/styles/*.scss"], buildStyles);
+  watch(["src/styles/**/*.scss"], buildStyles);
 }
 
 export default series(buildStyles, watchTask);
