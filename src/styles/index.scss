@@ -5,6 +5,7 @@
 @use "./base.scss" as *;
 
 // colors
+@use "./colors.scss" as *;
 
 // components (button, card, navbar, etc.)
 @use "./card.scss" as *;

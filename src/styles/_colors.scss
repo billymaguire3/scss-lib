@@ -1,0 +1,36 @@
+@use "./variables.scss" as *;
+@use "sass:color";
+
+@each $key, $value in $colors {
+  // text colors
+  .text-#{$key} {
+    color: $value;
+  }
+
+  // background colors
+  .bg-#{$key} {
+    background-color: $value;
+  }
+
+  // light variations. light-1, light-2, light-3, light-4, light-5
+  @for $i from 1 through 9 {
+    .text-#{$key}-light-#{$i} {
+      color: color.mix(white, $value, $i * 10%);
+    }
+
+    .bg-#{$key}-light-#{$i} {
+      background-color: color.mix(white, $value, $i * 10%);
+    }
+  }
+
+  // dark variations. dark-1, dark-2, dark-3, dark-4, dark-5
+  @for $i from 1 through 9 {
+    .text-#{$key}-dark-#{$i} {
+      color: color.mix(black, $value, $i * 10%);
+    }
+
+    .bg-#{$key}-dark-#{$i} {
+      background-color: color.mix(black, $value, $i * 10%);
+    }
+  }
+}
