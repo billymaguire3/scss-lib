@@ -4,11 +4,19 @@
 // base & layout
 @use "./base.scss" as *;
 
+// grid
+@use "./grid.scss" as *;
+
 // colors
 @use "./colors.scss" as *;
 
 // components (button, card, navbar, etc.)
 @use "./components/card.scss" as *;
 @use "./components/button.scss" as *;
+@use "./components/navbar.scss" as *;
 
 // utilities (margin, padding, etc.)
+@use "./utilities.scss" as *;
+
+// breakpoints
+@use "./breakpoints.scss" as *;

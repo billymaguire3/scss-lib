@@ -1,4 +1,5 @@
 <template>
+  <h2>Cards</h2>
   <div class="card">
     <div class="card-title">Card Title</div>
     <div class="card-body">
@@ -8,6 +9,8 @@
       make a type specimen book
     </div>
   </div>
+
+  <hr class="mt-4 mb-4" />
 </template>
 
 <style scoped></style>

@@ -14,6 +14,8 @@
 
   <a href="#" class="btn-complement-purple">click me</a>
   <a href="#" class="btn-complement-primary">click me</a>
+
+  <hr class="mt-4 mb-4" />
 </template>
 
 <style scoped></style>
