@@ -1,7 +1,7 @@
 <template>
-  <Headings />
+  <!-- <Headings />
   <hr />
-  <Text />
+  <Text /> -->
 </template>
 
 <script setup>

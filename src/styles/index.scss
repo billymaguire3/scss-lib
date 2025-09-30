@@ -8,6 +8,7 @@
 @use "./colors.scss" as *;
 
 // components (button, card, navbar, etc.)
-@use "./card.scss" as *;
+@use "./components/card.scss" as *;
+@use "./components/button.scss" as *;
 
 // utilities (margin, padding, etc.)

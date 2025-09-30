@@ -8,11 +8,11 @@ import Colors from "./components/colors/Colors.vue";
 <template>
   <Typography />
   <hr />
-  <Buttons />
-  <hr />
   <Cards />
   <hr />
   <Colors />
+  <hr />
+  <Buttons />
 </template>
 
 <style scoped></style>
