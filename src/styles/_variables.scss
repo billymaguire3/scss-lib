@@ -3,8 +3,8 @@
 
 // theme colors
 
-$primary: #326dee;
-$secondary: #1ac886;
+$primary: #bf0a30; // American flag red
+$secondary: #002868; // American flag blue
 $error: #d32752;
 $info: #f6c31c;
 
@@ -14,12 +14,9 @@ $colors: (
   "secondary": $secondary,
   "error": $error,
   "info": $info,
-  "blue": #1919e6,
-  "red": #e61919,
-  "yellow": #e6e619,
+  "blue": #002868,
+  "red": #bf0a30,
   "green": #19e635,
-  "orange": #ffa600,
-  "purple": #9900ff,
   "gray": #808080,
   "black": black,
   "white": white,
@@ -41,7 +38,7 @@ $base-margin: 0.75rem;
 
 // borders
 $base-border-thickness: 1px;
-$base-border-radius: 20px;
+$base-border-radius: 8px;
 
 // cursors
 $cursor-pointer: pointer;
@@ -55,3 +52,16 @@ $font-size-sm: $base-font-size * 0.75;
 $font-size-lg: $base-font-size * 1.5;
 $font-size-xl: $base-font-size * 2;
 $font-size-xxl: $base-font-size * 3;
+
+// line heights
+$line-height-sm: 1rem;
+$line-height-md: 1.25rem;
+$line-height-lg: 1.5rem;
+$line-height-xl: 2rem;
+
+// font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
