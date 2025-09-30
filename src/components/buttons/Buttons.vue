@@ -12,8 +12,17 @@
     btn-outlined-secondary
   </button>
 
-  <button class="btn-complement-primary">click me</button>
-  <button class="btn-complement-secondary">click me</button>
+  <h4 class="mt-4 mb-2">Team Specific Buttons</h4>
+  <div class="mb-3">
+    <h5 class="mb-2">USA Buttons</h5>
+    <button class="btn-usa-primary text-white">USA Primary</button>
+    <button class="btn-usa-secondary text-white">USA Secondary</button>
+  </div>
+  <div class="mb-3">
+    <h5 class="mb-2">EU Buttons</h5>
+    <button class="btn-eu-primary text-white">EU Primary</button>
+    <button class="btn-eu-secondary text-eu-primary">EU Secondary</button>
+  </div>
 
   <hr class="mt-4 mb-4" />
 </template>

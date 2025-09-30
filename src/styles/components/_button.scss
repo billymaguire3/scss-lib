@@ -1,5 +1,4 @@
 @use "../variables.scss" as *;
-@use "../functions.scss" as *;
 @use "sass:color";
 
 @mixin btn($bg-color: #e2e2e2) {
@@ -31,13 +30,37 @@
       background-color: $value;
     }
   }
-
-  .btn-complement-#{$key} {
-    @include btn($value);
-    color: light-comp($value);
-    &:hover {
-      color: $value;
-      background-color: light-comp($value);
-    }
-  }
 }
+
+// Regional button styles
+// .btn-usa-primary {
+//   @include btn($usa-primary);
+//   color: white;
+//   &:hover {
+//     background-color: color.adjust($usa-primary, $lightness: 10%);
+//   }
+// }
+
+// .btn-usa-secondary {
+//   @include btn($usa-secondary);
+//   color: white;
+//   &:hover {
+//     background-color: color.adjust($usa-secondary, $lightness: 10%);
+//   }
+// }
+
+// .btn-eu-primary {
+//   @include btn($eu-primary);
+//   color: white;
+//   &:hover {
+//     background-color: color.adjust($eu-primary, $lightness: 10%);
+//   }
+// }
+
+// .btn-eu-secondary {
+//   @include btn($eu-secondary);
+//   color: black;
+//   &:hover {
+//     background-color: color.adjust($eu-secondary, $lightness: 10%);
+//   }
+// }

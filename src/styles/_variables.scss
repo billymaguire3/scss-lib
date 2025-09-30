@@ -8,12 +8,22 @@ $secondary: #002868; // American flag blue
 $error: #d32752;
 $info: #f6c31c;
 
+// regional colors
+$usa-primary: #bf0a30; // American flag red
+$usa-secondary: #002868; // American flag blue
+$eu-primary: #003399; // European Union flag blue
+$eu-secondary: #ffcc00; // European Union flag yellow
+
 // color pallette
 $colors: (
   "primary": $primary,
   "secondary": $secondary,
   "error": $error,
   "info": $info,
+  "usa-primary": $usa-primary,
+  "usa-secondary": $usa-secondary,
+  "eu-primary": $eu-primary,
+  "eu-secondary": $eu-secondary,
   "blue": #002868,
   "red": #bf0a30,
   "green": #19e635,
