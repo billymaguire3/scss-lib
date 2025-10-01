@@ -10,7 +10,8 @@ $grid-gaps: (
   "3": 1rem,
 );
 // list
-$layout-values: flex-start, center, flex-end, space-between, space-around;
+$layout-values: flex-start, center, flex-end, space-between, space-around,
+  space-evenly;
 
 // base layout classes
 .container {

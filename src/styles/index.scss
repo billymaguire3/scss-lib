@@ -10,6 +10,9 @@
 // colors
 @use "./colors.scss" as *;
 
+// typography
+@use "./typography.scss" as *;
+
 // components (button, card, navbar, etc.)
 @use "./components/card.scss" as *;
 @use "./components/button.scss" as *;

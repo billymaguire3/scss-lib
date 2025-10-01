@@ -5,7 +5,7 @@
 
 $primary: #bf0a30; // American flag red
 $secondary: #002868; // American flag blue
-$error: #d32752;
+$error: #f30540;
 $info: #f6c31c;
 
 // regional colors
@@ -24,9 +24,6 @@ $colors: (
   "usa-secondary": $usa-secondary,
   "eu-primary": $eu-primary,
   "eu-secondary": $eu-secondary,
-  "blue": #002868,
-  "red": #bf0a30,
-  "green": #19e635,
   "gray": #808080,
   "black": black,
   "white": white,
@@ -59,15 +56,25 @@ $base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 // font sizes
 $base-font-size: 1rem;
 $font-size-sm: $base-font-size * 0.75;
+$font-size-md: $base-font-size * 1.25;
 $font-size-lg: $base-font-size * 1.5;
 $font-size-xl: $base-font-size * 2;
 $font-size-xxl: $base-font-size * 3;
 
-// line heights
-$line-height-sm: 1rem;
-$line-height-md: 1.25rem;
-$line-height-lg: 1.5rem;
-$line-height-xl: 2rem;
+// line heights (UI/UX optimized values)
+$base-line-height: 1.5; // 1.5x font size for optimal readability
+$line-height-tight: 1.2; // Tighter for headings
+$line-height-normal: 1.5; // Standard for body text
+$line-height-relaxed: 1.75; // More space for readability
+$line-height-loose: 2; // Maximum for special cases
+
+// letter spacing (UI/UX optimized values)
+$base-letter-spacing: 0; // Normal letter spacing
+$letter-spacing-tight: -0.025em; // Slightly tighter for large text
+$letter-spacing-normal: 0; // Standard spacing
+$letter-spacing-wide: 0.025em; // Slightly wider for readability
+$letter-spacing-wider: 0.05em; // More spacing for headings
+$letter-spacing-widest: 0.1em; // Maximum for special cases
 
 // font weights
 $font-weight-light: 300;
@@ -75,3 +82,8 @@ $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 $font-weight-black: 900;
+
+// text colors
+$text-color: #333333;
+$text-color-light: #666666;
+$text-color-dark: #000000;

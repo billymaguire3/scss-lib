@@ -1,13 +1,20 @@
 @use "../variables.scss" as *;
+@use "../colors.scss" as *;
+@use "sass:map";
 @use "sass:color";
 
-@mixin btn($bg-color: #e2e2e2) {
+@mixin btn($bg-color: 0) {
   text-decoration: none;
   cursor: $cursor-pointer;
   display: inline-block;
   padding: $base-padding $base-padding * 2;
   border-radius: $base-border-radius;
-  background-color: $bg-color;
+  @if $bg-color == 0 {
+    background-color: transparent;
+  } @else {
+    background-color: $bg-color;
+  }
+  // background-color: $bg-color;
   border: none;
 }
 
@@ -26,41 +33,20 @@
   .btn-outlined-#{$key} {
     @include btn(#fff);
     border: $base-border-thickness solid $value;
+    padding: $base-padding $base-padding * 1.25;
     &:hover {
       background-color: $value;
     }
   }
+
+  .btn-text-#{$key} {
+    @include btn();
+    $gray: map.get($colors, "gray");
+    color: $value;
+    &:hover {
+      color: $value;
+      // background-color: color.adjust($gray, $lightness: 30%);
+      // background-color: $gray;
+    }
+  }
 }
-
-// Regional button styles
-// .btn-usa-primary {
-//   @include btn($usa-primary);
-//   color: white;
-//   &:hover {
-//     background-color: color.adjust($usa-primary, $lightness: 10%);
-//   }
-// }
-
-// .btn-usa-secondary {
-//   @include btn($usa-secondary);
-//   color: white;
-//   &:hover {
-//     background-color: color.adjust($usa-secondary, $lightness: 10%);
-//   }
-// }
-
-// .btn-eu-primary {
-//   @include btn($eu-primary);
-//   color: white;
-//   &:hover {
-//     background-color: color.adjust($eu-primary, $lightness: 10%);
-//   }
-// }
-
-// .btn-eu-secondary {
-//   @include btn($eu-secondary);
-//   color: black;
-//   &:hover {
-//     background-color: color.adjust($eu-secondary, $lightness: 10%);
-//   }
-// }
