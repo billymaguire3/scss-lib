@@ -1,7 +1,30 @@
 @use "sass:math";
 @use "./breakpoints.scss" as *;
 
-$grid-columns: 12;
+// ============================================================================
+// SCSS LOOPS SHOWCASE - GRID SYSTEM
+// ============================================================================
+// This file demonstrates SCSS @for loops combined with breakpoint mixins
+//
+// KEY CONCEPTS:
+// 1. @for loops generate repetitive classes (col-1 through col-12)
+// 2. Breakpoint mixins with @content wrap loops in media queries
+// 3. Result: 60 column classes from ~30 lines of SCSS
+//
+// The Magic:
+// - Change $grid-columns once → all 60 classes update automatically
+// - Add a breakpoint once → 12 new column classes generated instantly
+//
+// Structure:
+// @include md {              ← Breakpoint mixin wraps everything
+//   @for $i from 1 to 12 {   ← Loop generates 12 column classes
+//     .col-#{$i}-md { ... }
+//   }
+// }
+// ============================================================================
+
+$grid-columns: 12; // Change this to 16 → instantly get col-1 through col-16!
+
 // map
 $grid-gaps: (
   "0": 0,
@@ -9,6 +32,7 @@ $grid-gaps: (
   "2": 0.5rem,
   "3": 1rem,
 );
+
 // list
 $layout-values: flex-start, center, flex-end, space-between, space-around,
   space-evenly;
@@ -46,9 +70,16 @@ $layout-values: flex-start, center, flex-end, space-between, space-around,
   }
 }
 
-// col classes
+// =======================================================================
+// COLUMN GENERATION USING @for LOOPS
+// =======================================================================
+// Each @for loop runs inside a breakpoint mixin, generating 12 column classes
+// Total output: 12 columns × 5 breakpoints = 60 CSS classes
+// =======================================================================
+
+// Extra Small - Mobile first (0px and up)
 @include xs {
-  // col-1-xs, col-2-xs, col-3-xs, col-4-xs
+  // Loop generates: .col-1-xs, .col-2-xs, ... .col-12-xs
   @for $i from 1 through $grid-columns {
     .col-#{$i}-xs {
       box-sizing: border-box;
@@ -58,8 +89,9 @@ $layout-values: flex-start, center, flex-end, space-between, space-around,
   }
 }
 
+// Small - Large phones (480px and up)
 @include sm {
-  // col-1-sm, col-2-sm, col-3-sm, col-4-sm
+  // Loop generates: .col-1-sm, .col-2-sm, ... .col-12-sm
   @for $i from 1 through $grid-columns {
     .col-#{$i}-sm {
       box-sizing: border-box;
@@ -69,8 +101,9 @@ $layout-values: flex-start, center, flex-end, space-between, space-around,
   }
 }
 
+// Medium - Tablets (720px and up)
 @include md {
-  // col-1-md, col-2-md, col-3-md, col-4-md
+  // Loop generates: .col-1-md, .col-2-md, ... .col-12-md
   @for $i from 1 through $grid-columns {
     .col-#{$i}-md {
       box-sizing: border-box;
@@ -80,8 +113,9 @@ $layout-values: flex-start, center, flex-end, space-between, space-around,
   }
 }
 
+// Large - Desktops (960px and up)
 @include lg {
-  // col-1-lg, col-2-lg, col-3-lg, col-4-lg
+  // Loop generates: .col-1-lg, .col-2-lg, ... .col-12-lg
   @for $i from 1 through $grid-columns {
     .col-#{$i}-lg {
       box-sizing: border-box;
@@ -91,8 +125,9 @@ $layout-values: flex-start, center, flex-end, space-between, space-around,
   }
 }
 
+// Extra Large - Large desktops (1200px and up)
 @include xl {
-  // col-1-xl, col-2-xl, col-3-xl, col-4-xl
+  // Loop generates: .col-1-xl, .col-2-xl, ... .col-12-xl
   @for $i from 1 through $grid-columns {
     .col-#{$i}-xl {
       box-sizing: border-box;

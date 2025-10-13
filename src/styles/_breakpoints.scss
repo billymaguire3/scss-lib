@@ -1,5 +1,35 @@
 @use "sass:map";
 
+// ============================================================================
+// SCSS MIXINS WITH @content - BREAKPOINTS
+// ============================================================================
+// This file demonstrates the @content directive in SCSS mixins
+//
+// KEY CONCEPT:
+// The @content directive is a placeholder that gets replaced with whatever
+// styles you pass INTO the mixin when you call it.
+//
+// Think of it like this:
+// - Mixin = A template with a blank space (@content)
+// - When you @include the mixin, you fill in that blank space
+//
+// Example:
+// @mixin md {
+//   @media (min-width: 720px) {
+//     @content;  ← Styles get injected here
+//   }
+// }
+//
+// @include md {
+//   .my-class { color: blue; }  ← These styles fill @content
+// }
+//
+// Result:
+// @media (min-width: 720px) {
+//   .my-class { color: blue; }
+// }
+// ============================================================================
+
 $breakpoints: (
   "xs": 0,
   "sm": 480px,
@@ -8,33 +38,34 @@ $breakpoints: (
   "xl": 1200px,
 );
 
+// Breakpoint mixins - each uses @content to inject your styles
 @mixin xs {
   @media (min-width: map.get($breakpoints, "xs")) {
-    @content;
+    @content; // Your styles get placed here
   }
 }
 
 @mixin sm {
   @media (min-width: map.get($breakpoints, "sm")) {
-    @content;
+    @content; // Your styles get placed here
   }
 }
 
 @mixin md {
   @media (min-width: map.get($breakpoints, "md")) {
-    @content;
+    @content; // Your styles get placed here
   }
 }
 
 @mixin lg {
   @media (min-width: map.get($breakpoints, "lg")) {
-    @content;
+    @content; // Your styles get placed here
   }
 }
 
 @mixin xl {
   @media (min-width: map.get($breakpoints, "xl")) {
-    @content;
+    @content; // Your styles get placed here
   }
 }
 

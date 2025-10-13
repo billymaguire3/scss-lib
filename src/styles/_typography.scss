@@ -1,12 +1,49 @@
 @use "./variables.scss" as *;
 
-// Body text mixin
+// ============================================================================
+// SCSS MIXIN SHOWCASE - TYPOGRAPHY
+// ============================================================================
+// This file demonstrates SCSS mixins with optional/default parameters
+//
+// KEY CONCEPT:
+// Mixins can have default values for all parameters. When calling the mixin,
+// you only need to specify the parameters you want to override!
+//
+// Benefits:
+// - Write less code (only override what changes)
+// - Maintain consistency (defaults ensure uniform styling)
+// - Flexible and reusable (same mixin, different combinations)
+// - Self-documenting (named parameters show intent)
+//
+// Example Usage:
+// .my-text-1 {
+//   @include body-text();  // Uses ALL defaults
+// }
+//
+// .my-text-2 {
+//   @include body-text($font-size: $font-size-lg);  // Override ONLY font-size
+// }
+//
+// .my-text-3 {
+//   @include body-text(
+//     $font-size: $font-size-md,
+//     $font-weight: $font-weight-bold,
+//     $line-height: $line-height-tight
+//   );  // Override MULTIPLE parameters
+// }
+// ============================================================================
+
+// Body text mixin with default parameters
 @mixin body-text(
   $font-size: $base-font-size,
+  // Default: 1rem
   $font-weight: $font-weight-normal,
+  // Default: 400
   $letter-spacing: $base-letter-spacing,
+  // Default: 0
   $line-height: $base-line-height,
-  $color: $text-color
+  // Default: 1.5
+  $color: $text-color // Default: #333
 ) {
   font-size: $font-size;
   font-weight: $font-weight;

@@ -2517,10 +2517,6 @@ img {
   background-color: white;
 }
 
-.test-if {
-  color: black;
-}
-
 .tuey-body {
   font-size: 1rem;
   font-weight: 400;
@@ -2614,7 +2610,9 @@ img {
   padding: 0.75rem;
   border: 1px solid #ddd;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: white;
 }
 .card .card-title {
   font-size: 1.5rem;
@@ -2628,13 +2626,89 @@ img {
   text-decoration: underline;
   font-weight: bold;
 }
+.card .card-header {
+  padding: 0.75rem;
+  margin: -1.5rem 0rem;
+  border-bottom: 1px solid #ddd;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.card .card-footer {
+  padding: 0.75rem;
+  margin: -1.5rem;
+  border-top: 1px solid #ddd;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.card .card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card .card-img.card-img-top {
+  margin: -1.5rem 0rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-rounded-none {
+  border-radius: 0;
+}
+
+.card-rounded-xs {
+  border-radius: 4px;
+}
+
+.card-rounded-sm {
+  border-radius: 8px;
+}
+
+.card-rounded {
+  border-radius: 16px;
+}
+
+.card-rounded-lg {
+  border-radius: 24px;
+}
+
+.card-rounded-xl {
+  border-radius: 32px;
+}
+
+.card-flat {
+  box-shadow: none;
+  border: 1px solid #e5e5e5;
+}
+
+.card-elevated {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-elevated-lg {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-hover {
+  cursor: pointer;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-bordered {
+  border: 2px solid #ddd;
+}
+
+.card-outlined {
+  background-color: transparent;
+  box-shadow: none;
+}
 
 .btn {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
 }
@@ -2644,7 +2718,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #bf0a30;
   border: none;
 }
@@ -2657,7 +2731,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid #bf0a30;
@@ -2672,7 +2746,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: #bf0a30;
@@ -2686,7 +2760,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #002868;
   border: none;
 }
@@ -2699,7 +2773,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid #002868;
@@ -2714,7 +2788,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: #002868;
@@ -2728,7 +2802,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #f30540;
   border: none;
 }
@@ -2741,7 +2815,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid #f30540;
@@ -2756,7 +2830,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: #f30540;
@@ -2770,7 +2844,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #f6c31c;
   border: none;
 }
@@ -2783,7 +2857,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid #f6c31c;
@@ -2798,7 +2872,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: #f6c31c;
@@ -2812,7 +2886,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #bf0a30;
   border: none;
 }
@@ -2825,7 +2899,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid #bf0a30;
@@ -2840,7 +2914,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: #bf0a30;
@@ -2854,7 +2928,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #002868;
   border: none;
 }
@@ -2867,7 +2941,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid #002868;
@@ -2882,7 +2956,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: #002868;
@@ -2896,7 +2970,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #003399;
   border: none;
 }
@@ -2909,7 +2983,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid #003399;
@@ -2924,7 +2998,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: #003399;
@@ -2938,7 +3012,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #ffcc00;
   border: none;
 }
@@ -2951,7 +3025,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid #ffcc00;
@@ -2966,7 +3040,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: #ffcc00;
@@ -2980,7 +3054,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #808080;
   border: none;
 }
@@ -2993,7 +3067,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid #808080;
@@ -3008,7 +3082,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: #808080;
@@ -3022,7 +3096,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: black;
   border: none;
 }
@@ -3035,7 +3109,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid black;
@@ -3050,7 +3124,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: black;
@@ -3064,7 +3138,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: white;
   border: none;
 }
@@ -3077,7 +3151,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: #fff;
   border: none;
   border: 1px solid white;
@@ -3092,7 +3166,7 @@ img {
   cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: transparent;
   border: none;
   color: white;
@@ -3441,7 +3515,7 @@ img {
 }
 
 .br {
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 .br-none {
@@ -3449,15 +3523,15 @@ img {
 }
 
 .br-xs {
-  border-radius: 2px;
-}
-
-.br-sm {
   border-radius: 4px;
 }
 
+.br-sm {
+  border-radius: 8px;
+}
+
 .br-lg {
-  border-radius: 16px;
+  border-radius: 32px;
 }
 
 .br-full {

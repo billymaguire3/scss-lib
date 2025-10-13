@@ -14,7 +14,6 @@
   } @else {
     background-color: $bg-color;
   }
-  // background-color: $bg-color;
   border: none;
 }
 
@@ -45,8 +44,6 @@
     color: $value;
     &:hover {
       color: $value;
-      // background-color: color.adjust($gray, $lightness: 30%);
-      // background-color: $gray;
     }
   }
 }

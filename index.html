@@ -3,10 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tuey Designs</title>
+    <title>Tuey Designs Library & Ryder Cup Demo</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .container {
+        text-align: center;
+        background: white;
+        padding: 3rem;
+        border-radius: 1rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        margin-bottom: 2rem;
+        color: #333;
+      }
+      .links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      a {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: #667eea;
+        color: white;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        transition: transform 0.2s, background 0.2s;
+      }
+      a:hover {
+        transform: translateY(-2px);
+        background: #764ba2;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div class="container">
+      <h1>Tuey Designs Library & Ryder Cup Demo</h1>
+      <div class="links">
+        <a href="/src/tuey-designs/tuey-designs.html">Tuey Designs Library</a>
+        <a href="/src/ryder-cup/ryder-cup.html">Ryder Cup Demo</a>
+      </div>
+    </div>
   </body>
 </html>

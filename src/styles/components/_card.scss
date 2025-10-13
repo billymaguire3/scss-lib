@@ -1,12 +1,49 @@
 @use "../variables.scss" as *;
 @use "sass:math";
 
+// ============================================================================
+// SCSS FUNCTION SHOWCASE - CARD COMPONENT
+// ============================================================================
+// This file demonstrates a custom SCSS function for managing border radius
+//
+// CUSTOM FUNCTION:
+// - card-radius($size) : Returns border-radius from predefined size map
+//
+// This function uses:
+// - Map data structure to store size values
+// - map-get() to retrieve values
+// - math.div() for precise calculations
+//
+// Benefits:
+// - Single source of truth for all border radius sizes
+// - Easy to maintain and update globally
+// - Consistent sizing across all card variants
+// ============================================================================
+
+// Custom helper function: Generate card border radius
+// Uses a map to store all possible radius sizes
+@function card-radius($size: "sm") {
+  // $base-border-radius: 16px in variables.scss
+  $radius-map: (
+    "none": 0,
+    "xs": math.div($base-border-radius, 4),
+    "sm": math.div($base-border-radius, 2),
+    "md": $base-border-radius,
+    "lg": $base-border-radius * 1.5,
+    "xl": $base-border-radius * 2,
+  );
+  @return map-get($radius-map, $size);
+}
+
 .card {
   display: block;
   padding: $base-padding;
   border: $base-border-thickness solid #ddd;
   box-shadow: $base-box-shadow;
-  border-radius: math.div($base-border-radius, 4);
+  // Using custom card-radius() function
+  border-radius: card-radius("sm");
+  transition: all 0.3s ease;
+  background-color: white;
 
   .card-title {
     font-size: $font-size-lg;
@@ -21,4 +58,95 @@
       font-weight: bold;
     }
   }
+
+  // Card header (optional)
+  .card-header {
+    padding: $base-padding;
+    margin: -$base-padding -$base-padding $base-padding -$base-padding;
+    border-bottom: $base-border-thickness solid #ddd;
+    font-weight: bold;
+    font-size: $font-size-md;
+  }
+
+  // Card footer (optional)
+  .card-footer {
+    padding: $base-padding;
+    margin: $base-padding -$base-padding -$base-padding -$base-padding;
+    border-top: $base-border-thickness solid #ddd;
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  // Card image
+  .card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    &.card-img-top {
+      margin: -$base-padding -$base-padding $base-padding -$base-padding;
+      // Using card-radius() function for consistency
+      border-radius: card-radius("sm") card-radius("sm") 0 0;
+    }
+  }
+}
+
+// Card modifiers for border-radius - Using custom card-radius() function
+.card-rounded-none {
+  border-radius: card-radius("none");
+}
+
+.card-rounded-xs {
+  border-radius: card-radius("xs");
+}
+
+.card-rounded-sm {
+  border-radius: card-radius("sm");
+}
+
+.card-rounded {
+  border-radius: card-radius("md");
+}
+
+.card-rounded-lg {
+  border-radius: card-radius("lg");
+}
+
+.card-rounded-xl {
+  border-radius: card-radius("xl");
+}
+
+// Card elevation variants
+.card-flat {
+  box-shadow: none;
+  border: $base-border-thickness solid #e5e5e5;
+}
+
+.card-elevated {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-elevated-lg {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+// Card with hover effect
+.card-hover {
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Card bordered
+.card-bordered {
+  border: 2px solid #ddd;
+}
+
+// Card outlined (no background)
+.card-outlined {
+  background-color: transparent;
+  // border: 2px solid #ddd;
+  box-shadow: none;
 }

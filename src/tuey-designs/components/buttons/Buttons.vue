@@ -1,14 +1,5 @@
 <template>
   <div class="container">
-    <h2>Buttons</h2>
-
-    <!-- Default Button -->
-    <div class="row gap-2 mt-2">
-      <div class="col-12-xs col-6-sm col-4-md">
-        <button class="btn">default btn</button>
-      </div>
-    </div>
-
     <!-- Solid Buttons -->
     <h4 class="mt-4 mb-2">Solid Buttons</h4>
     <div class="row gap-2 mt-2">
